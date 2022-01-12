@@ -2,6 +2,9 @@
 .bg-purple{
     background-color: #b91450;
 }
+.bg-grey{
+    background-color:#808080;
+}
 /** form **/
 
 #form label{
@@ -24,4 +27,12 @@ button{
     background-color:#ccc;
     color: #b91450;
     margin-bottom: 20px;
+}
+/** Section Tour Ticket**/
+.table>:not(:first-child){
+    border-top: none;
+}
+#table {
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
 }

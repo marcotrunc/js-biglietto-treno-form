@@ -10,9 +10,9 @@
 </head>
 <body>
     <!-- Form-->
-    <div id="form" class="container-fluid bg-purple" >
+    <div class="container-fluid bg-purple py-5" >
         <h2 class="text-light text-center py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-        <div class="container bg-white mb-5">
+        <div id="form" class="container bg-white mb-5">
             <div class="row">
                 <div class="col-4">
                     <label for="user-name">Nome Cognome</label>                      
@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-4">
                     <label for="km">Km da percorrere</label>
-                    <input type="number" id="km" placeholder="0" value="" />
+                    <input type="number" id="km" placeholder="0" class="text-center" value="" />
                 </div>
                 <div class="col-4">
                     <label for="age">Fascia d'età</label>
@@ -45,13 +45,51 @@
             </div>
         </div>
         <!--Section your ticket-->
-        <div class="container bg-light">
+        <h2 class="text-light text-center py-3">IL TUO BIGLIETTO</h2>
+        <div id="table-calculator" class="container bg-white">
+            <h3>DETTAGLIO PASSEGGIERI</h3>
             <div class="row">
-                <div class="col-md-3"><h3>Nome Passeggero</h3></div>
-                <div class="col-md-9">ddadsa</div>
+                <div class="col-md-3 bg-grey">
+                    <h3 id="user-id" class="text-dark">Nome Passeggero</h3>
+                    <!--todo metti il nome con js -->
+                    dsadsads
+                </div>
+                <div id="table" class="col-md-9">
+                    <div class="pb-5">
+                        <div class="row">
+                            <div class="col-3">
+                                <h4>Offerta</h4>
+                            </div>
+                            <div class="col-3">
+                                <h4>Carozza</h4>
+                            </div>
+                            <div class="col-3">
+                                <h4>Codice CP</h4>
+                            </div>
+                            <div class="col-3">
+                                <h4>Costo biglietto</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <span>Biglietto Standard</span>
+                            </div>
+                            <div class="col-3">
+                                <span>5</span>
+                            </div>
+                            <div class="col-3">
+                                <span>92911</span>
+                            </div>
+                            <div class="col-3">
+                                <span id="cost-ticket"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>s
 </body>
 </html>
 <!-- Calcola il prezzo del tuo Biglietto

@@ -10,8 +10,9 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 // ** Richiamo gli elementi button
 const generateElement = document.getElementById('generate');
 const deleteElement = document.getElementById('delete');
-// ** Richiamare Elementi in pagina (km da percorrere, fascia d'età, cost-ticket)
+// ** Richiamare Elementi in pagina (nome e cognome, km da percorrere, fascia d'età, cost-ticket)
 let userName = document.getElementById('user-name');
+const userId = document.getElementById('user-id');
 let kmElement = document.querySelector('#km');
 let ageElement = document.getElementById('age');
 let costElement = document.getElementById('cost-ticket');
@@ -33,9 +34,9 @@ generateElement.addEventListener('click', function(){
     }else if(ageElement ==='over 65'){
         ultimatePrice = originalPrice - (originalPrice * 0.40);
     }
+    costElement.innerHTML = `<strong>${ultimatePrice}€<Strong>`;
+    userId.innerHTML = userName;
     console.log(`Il costo definitivo del biglietto è: ${ultimatePrice}`);
-    costElement.innerHTML = `<strong>Il costo definitivo del biglietto è ${ultimatePrice}€`;
-
 });
 
 deleteElement.addEventListener('click', function(){
