@@ -17,6 +17,7 @@ let kmElement = document.querySelector('#km');
 let ageElement = document.getElementById('age');
 const costElement = document.getElementById('cost-ticket');
 const tableCalculator = document.getElementById('calculator'); 
+const codeCp =document.getElementById('code-cp');
 
 let ultimatePrice;
 // ** Quando premo su Genera Acquisisco i valori
@@ -35,10 +36,14 @@ generateElement.addEventListener('click', function(){
     }else if(ageElement ==='over 65'){
         ultimatePrice = originalPrice - (originalPrice * 0.40);
     }
-    costElement.innerHTML = `<strong>${ultimatePrice}€<Strong>`;
+    // ? Ricavo in maniera randomica il codice CP
+    const cpNumber = Math.floor(Math.random()*1000) + 1;
+    // ? Stampe in pagina 
     userId.innerHTML = userName;
-    tableCalculator.classList.remove('d-none');
+    codeCp.innerHTML = cpNumber;
+    costElement.innerHTML = `<strong>${ultimatePrice.toFixed(2)}€</strong>`;
     
+    tableCalculator.classList.remove('d-none');
 });
 
 deleteElement.addEventListener('click', function(){
