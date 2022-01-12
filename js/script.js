@@ -15,7 +15,8 @@ let userName = document.getElementById('user-name');
 const userId = document.getElementById('user-id');
 let kmElement = document.querySelector('#km');
 let ageElement = document.getElementById('age');
-let costElement = document.getElementById('cost-ticket');
+const costElement = document.getElementById('cost-ticket');
+const tableCalculator = document.getElementById('calculator'); 
 
 let ultimatePrice;
 // ** Quando premo su Genera Acquisisco i valori
@@ -36,7 +37,8 @@ generateElement.addEventListener('click', function(){
     }
     costElement.innerHTML = `<strong>${ultimatePrice}€<Strong>`;
     userId.innerHTML = userName;
-    console.log(`Il costo definitivo del biglietto è: ${ultimatePrice}`);
+    tableCalculator.classList.remove('d-none');
+    
 });
 
 deleteElement.addEventListener('click', function(){
