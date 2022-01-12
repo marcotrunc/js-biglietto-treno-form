@@ -23,6 +23,10 @@ let ultimatePrice;
 // ** Quando premo su Genera Acquisisco i valori
 generateElement.addEventListener('click', function(){
     userName = userName.value;
+    if((userName == '') || (!isNaN(userName))){
+        alert("Inserire un nome valido!");
+        throw new Error('questo non è un errore, serve per bloccare il codice Javascript.');
+    }
     kmElement = kmElement.value;
     ageElement = ageElement.value;
     const originalPrice = kmElement * 0.21;
@@ -50,3 +54,4 @@ deleteElement.addEventListener('click', function(){
     userName.value = '';
     kmElement.value = '';
 }); 
+
